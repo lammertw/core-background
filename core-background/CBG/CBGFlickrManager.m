@@ -80,7 +80,15 @@ static CBGFlickrManager *sharedManager = nil;
         NSString *lat = [[NSNumber numberWithDouble:[CBGLocationManager sharedManager].locationBestEffort.coordinate.latitude] stringValue];
         NSString *lon = [[NSNumber numberWithDouble:[CBGLocationManager sharedManager].locationBestEffort.coordinate.longitude] stringValue];
         
-        [self.flickrRequest callAPIMethodWithGET:@"flickr.photos.search" arguments:[NSDictionary dictionaryWithObjectsAndKeys:lat, @"lat", lon, @"lon", KFlickrSearchRadiusInMiles, @"radius", @"mi", @"radius_units", KFlickrSsearchTags, @"tags", @"tag_mode", @"any", KFlickrSearchLicense, @"license", @"500", @"per_page", nil]];
+        if (YES)
+        {
+            // TODO
+            // overwrite with Prague ZOO
+            lat = @"50.118154";
+            lon = @"14.405133";
+        }
+        
+        [self.flickrRequest callAPIMethodWithGET:@"flickr.photos.search" arguments:[NSDictionary dictionaryWithObjectsAndKeys:lat, @"lat", lon, @"lon", KFlickrSearchRadiusInMiles, @"radius", @"mi", @"radius_units", @"tag_mode", @"any", KFlickrSearchLicense, @"license", @"500", @"per_page", nil]];
     }
 }
 

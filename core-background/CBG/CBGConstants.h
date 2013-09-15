@@ -31,7 +31,7 @@
 //Flickr
 #define KFlickrSsearchTags @"bike"
 #define KFlickrSearchLicense @"4,5,6,7"
-#define KFlickrSearchRadiusInMiles @"10"
+#define KFlickrSearchRadiusInMiles @"1"
 #define kFlickrSearchInvalidateCacheTimeoutDurationInSeconds 900 //15min (60 * 15)
 #define kFlickrSearchQuitTimeoutDurationInSeconds 15
 
